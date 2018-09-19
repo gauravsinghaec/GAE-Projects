@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="post" style="text-align: left;">	
+<h2>Signup</h2>
+	<table>
+		<tr>
+			<td style="text-align:right">
+			<label style="font-weight:bold"	>	Username		</label>
+			</td>
+			<td>
+			<label>
+					<input type="text" name="username" value="{{uname}}" required>
+			</label>
+			</td>
+			<td style="color:red">{{ unameerror }} 
+			</td>			
+		</tr>
+		<tr>
+			<td style="text-align:right" >
+			<label style="font-weight:bold"> Password 	</label>
+			</td>
+			<td>
+			<label>
+				<input type="password" name="password" value="{{pw}}" required>
+			</label>
+			</td>
+			<td style="color:red">{{ pwerror }}
+			</td>			
+		</tr>
+		<tr>
+			<td style="text-align:right">
+			<label style="font-weight:bold"> Confirm Password 	</label>
+			</td>
+			<td>
+			<label>
+				<input type="password" name="verify" value="{{vpw}}" required>
+			</label>	
+			</td>
+			<td style="color:red">{{ vpwerror }}
+			</td>			
+		</tr>
+		<tr>
+			<td style="text-align:right">
+			<label style="font-weight:bold"> Email (optional) 	</label>
+			</td>
+			<td>
+			<label>
+				<input type="email" name="email" value="{{email}}">
+			</label>		
+			</td>
+			<td style="color:red">{{ emailerror }}
+			</td>			
+		</tr>
+	</table>
+	<br>
+	<input type="submit" name="submit">
+</form>
+{% endblock %}

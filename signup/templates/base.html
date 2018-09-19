@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A Web Blog!</title>
+</head>
+<body>
+	<div id="main" >
+	<header id="blog-top">
+		<a href="/login">{{ login_user }}</a>  <a href="/signup">{{ logout_signup }}</a>
+		<h1><a>Web Blog</h1>
+	</header>
+	
+		{% block content %}
+		{% endblock %}
+
+	</div>
+</body>
+</html>

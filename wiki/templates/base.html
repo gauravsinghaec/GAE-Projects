@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/static/main.css">
+	<title>Gaurav Singh's Blog</title>
+</head>
+<body>
+	<div id="main" >
+	<header id="wiki-top">
+		<h1><a href="/wiki">My Blog, Your Mirror</a>	</h1>
+	</header>
+		<div class="loginlogout">
+		    {% if user %}
+		    	{% if editModeOn %}
+		      <a class="login-link" href="/wiki/{{ pagename }}">view</a>		    	
+		    	{% else %}
+		      <a class="login-link" href="/wiki/_edit/{{ pagename }}">edit</a>		    	
+		    	{% endif %}
+		      |
+		      <a class="login-link" href="/wiki/history">history</a>       
+		      <span></span>
+		      {{user.user_name}} (<a class="login-link" href="/wiki/logout">logout</a>)
+		    {% else %}
+		      <a class="login-link" href="/wiki/history">history</a>       
+		      <a class="login-link" href="/wiki/login">login</a>|<a class="login-link" href="/wiki/signup">signup</a>
+		    {% endif %}
+		</div>	
+
+	{% block content %}
+	{% endblock %}
+		<div class="loginlogout"> Queried {{ trackRefresh }} seconds ago</div>
+	<footer>
+		<h1><a href="https://www.facebook.com/gauravsinghaec/">Follow Me on Facebook</a>	</h1>
+	</footer>	
+	</div>
+</body>
+</html>

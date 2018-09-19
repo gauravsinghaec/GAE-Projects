@@ -1,0 +1,65 @@
+body {
+    font-size: 90%;
+}
+
+#main{
+    background-color: #44aaa1;
+    margin: 0 15%;
+}
+
+.blogposts, form , .welcome{
+    margin: 0% 9%;
+    padding: 2%;
+    font-family: monospace;
+}
+
+
+header#wiki-top h1,footer{
+    padding: 3%;
+    background-color: #DDDDDD;
+    text-align: center;
+    font-family: cursive;
+}
+
+
+header#wiki-top h1 a{
+    background-color: transparent;
+    outline: none;
+}
+
+.loginlogout{
+    position: relative;
+    left: 40%
+}
+
+
+a{
+    text-decoration: none;
+    padding: 1%;
+    color: black;
+    outline: none;
+}
+
+a:link{
+    
+}
+
+a:visited{
+    background-color:  #11C0FF;
+}
+
+a:focus{
+    background-color:  #111493;
+}
+a:hover{
+    background-color: #1169B4;
+}
+
+.error {
+    color: red;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+}

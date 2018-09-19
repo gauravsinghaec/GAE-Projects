@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="post">	
+	<textarea  type="text" name="content" rows="25" cols="80">{{content | safe}}</textarea>
+	<br><input type="submit" name="submit" value="Save">		
+</form>
+	
+{% endblock %}
